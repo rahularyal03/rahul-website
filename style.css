@@ -756,6 +756,7 @@ line-height: 20px;
 
     .about{
         height: 100vh;
+        padding: 50px 0;
     }
 
     .container{
@@ -823,7 +824,7 @@ line-height: 20px;
 .contact{
     grid-template-columns: repeat(1, 2fr);
     grid-gap: 3rem;
-    padding: 60px 5% 3px 5%;
+    padding: 50px 5% 3px 5%;
 }
 
 .contact-form h1{
@@ -990,7 +991,7 @@ line-height: 20px;
     }
     
     .about{
-        height: 220vh;
+        height: 215vh;
     }
     .contact-form form input, form textarea {
         width: 85%;
@@ -1009,7 +1010,7 @@ line-height: 20px;
     }
 
     .firstSection{
-        height: 90vh;
+        height: 80vh;
     }
 
     .about-text h5{
