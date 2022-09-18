@@ -1,16 +1,3 @@
-// option = document.querySelector('.option')
-// navbar = document.querySelector('.navbar')
-// navList = document.querySelector('.nav-list')
-// search = document.querySelector('.searchbar')
-
-// // displaying user name in website 
-// let name = prompt("What is your name?");
-// user = name.toUpperCase();
-// document.getElementById('logo').innerHTML = "Hello !" + ' ' + user;
-
-
-// alerting
-
 function myFunction(){
 
    response = confirm("Are you sure want to submit?");
@@ -47,19 +34,128 @@ const interval = setInterval(() => {
     document.getElementById('date-time').innerHTML = dateTime;
 }, 1000);
 
+// window.addEventListener("scroll", function(){
+//     var header =document.querySelector("header");
+//     header.classList.toggle("sticky", window.scrollY > 0);
+// })
+
+$(window).on('scroll',function(){
+    if ($(window).scrollTop()){
+        $('nav').addClass('black');
+    }
+
+    else{
+        $('nav').removeClass('black');
+    }
+});
 
 
 
-// option.addEventListener('click', () => {
-//     navbar.classList.toggle('h-nav-resp')
-//     navList.classList.toggle('v-opacity-resp')
-//     search.classList.toggle('v-opacity-resp')
+const items = document.querySelectorAll(".navList a");
+items.forEach((item) => {
+    item.addEventListener("click",() =>{
+    document.querySelector(".navList a.active").classList.remove("active");
+    item.classList.add("active");
+
+});
+});
 
 
 
+    // <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "100575456006902");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    // </script>
+
+    // <!-- Your SDK code -->
+    // <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v14.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    // </script>
+
+    let whenClicked = () => {
+      Links.classList.remove("show");
+    };
 
 
 
-// });
-// let whenClicked = () => {
-//         Links.classList.remove("show")}
+    // ES6 Class(type writer effect)
+class TypeWriter {
+  constructor(txtElement, words, wait = 3000) {
+    this.txtElement = txtElement;
+    this.words = words;
+    this.txt = '';
+    this.wordIndex = 0;
+    this.wait = parseInt(wait, 10);
+    this.type();
+    this.isDeleting = false;
+  }
+
+  type() {
+    // Current index of word
+    const current = this.wordIndex % this.words.length;
+    // Get full text of current word
+    const fullTxt = this.words[current];
+
+    // Check if deleting
+    if(this.isDeleting) {
+      // Remove char
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      // Add char
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    // Insert txt into element
+    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+
+    // Initial Type Speed
+    let typeSpeed = 100;
+
+    if(this.isDeleting) {
+      typeSpeed /= 2;
+    }
+
+    // If word is complete
+    if(!this.isDeleting && this.txt === fullTxt) {
+      // Make pause at end
+      typeSpeed = this.wait;
+      // Set delete to true
+      this.isDeleting = true;
+    } else if(this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      // Move to next word
+      this.wordIndex++;
+      // Pause before start typing
+      typeSpeed = 500;
+    }
+
+    setTimeout(() => this.type(), typeSpeed);
+  }
+}
+
+
+// Init On DOM Load
+document.addEventListener('DOMContentLoaded', init);
+
+// Init App
+function init() {
+  const txtElement = document.querySelector('.second-text');
+  const words = JSON.parse(txtElement.getAttribute('data-words'));
+  const wait = txtElement.getAttribute('data-wait');
+  // Init TypeWriter
+  new TypeWriter(txtElement, words, wait);
+}
