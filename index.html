@@ -11,6 +11,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css" integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    
 
 </head>
 
@@ -154,13 +155,13 @@
             
             <p class="small">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque, unde nulla nihil ipsum accusantium et, voluptas ipsa error, magni repudiandae necessitatibus sit incidunt animi iste. Repellat, corporis illum? Vitae, ducimus?</p>
             
-            <form>
+            <form onsubmit="sendEmail(); reset(); return false;">
             
-                <input class="form-input" type="text" name="name" id="Name" placeholder="Enter Your Name">
-                <input class="form-input" type="text" name="number" id="Phone" placeholder="Enter Your Number">
-                <input class="form-input" type="text" name="email" id="Email" placeholder="Enter Your Email Address">
-                <textarea class="form-input" id="Problem" name="remarks" placeholder="Describe your problem in brief."></textarea>
-                <button class="button" id = "submit" onclick = "myFunction()">Submit</button>
+                <input class="form-input" type="name" name="name" id="name" placeholder="Enter Your Name" required>
+                <input class="form-input" type="number" name="number" id="phone" placeholder="Enter Your Number" required>
+                <input class="form-input" type="email" name="email" id="email" placeholder="Enter Your Email Address" required>
+                <textarea class="form-input" id="message" name="remarks" placeholder="Write your message here." required></textarea>
+                <button class="button" id = "submit" type="submit">Submit</button>
                 <p id="submitted"></p>
 
                 
@@ -229,9 +230,34 @@
     <!-- Your Chat plugin code -->
     <div id="fb-customer-chat" class="fb-customerchat">
     </div>
+
     <script src="main.js"></script>
-    <script src="particles.min.js"></script>
     <script src="app.js"></script>
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+
+       
+ // Receive email from contact form using js 
+
+ function sendEmail(){
+    Email.send({
+      Host : "smtp.gmail.com",
+      Username : "sharmapitambar0@gmail.com",
+      Password : "rahul@website123",
+      To : 'rahularyal2058@gmail.com',
+      From : document.getElementById("email").value,
+      Subject : "New contact Form Enquiry",
+      Body : "Name: " + document.getElementById("name").value + "<br> Email: " + document.getElementById("email").value + "<br> Phone no. : " + document.getElementById("phone").value + "<br> Message: " + document.getElementById("message").value
+  }).then(
+    message => alert("Message sent succesfully")
+  );
+  }
+
+    </script>
+
+
+    </body>
 
    
 
