@@ -182,7 +182,7 @@
 .main-box {
     display: flex;
     max-width: 100%;
-    height: 100vh;
+    height: 100%;
     align-items: center;
     justify-content: baseline;
     padding: 50px 10px;
@@ -207,7 +207,7 @@
 
 .middle {
     width: 100%;
-    height: 50vh;
+    height: 25%;
     padding: 10px 10px;
     display: flex;
     flex-direction: column;
@@ -799,6 +799,18 @@ line-height: 20px;
 
     .type-writer{
         padding: 0;
+    }
+
+    .links-bottom{
+        display: block;
+    }
+
+    .link-right, .links-left{
+        display: none;
+    }
+
+    .middle{
+        height: 40%;
     }
 }
 
