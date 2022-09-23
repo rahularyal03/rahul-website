@@ -25,7 +25,7 @@
             <i class="fas fa-bars"></i>
         </label>
             
-            <div class="greeting animate-charcter">Rahul</div>
+            <div class="greeting animate-charcter"><a href="#home">Rahul</div></a>
             
 
             <ul class="navList v-opacity-resp">
@@ -75,8 +75,7 @@
             </h2>
             <h5>Front-end Developer (Engineering Student)
             </h5>
-            <p class="small">Hi! I'm Rahul Aryal. I am an engineering student pursuing Btech. in Computer Science and Engineering. I am from Nepal and currently living in India for educational purpose.<br>To see my resume please click on the button below.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam distinctio error labore nesciunt nihil illum aperiam earum vitae deserunt, officia sapiente tenetur. Iusto earum aspernatur, atque omnis ullam voluptatibus quidem pariatur facere accusamus alias perspiciatis laborum, inventore cum facilis consectetur culpa eveniet magni fugit nobis error itaque! Ullam, eaque dolorum?
+            <p class="small"><b>Hi! I'm Rahul Aryal.</b> I am an engineering student pursuing Btech. in Computer Science and Engineering. I am from Nepal and currently living in India for educational purpose.<p class="small">I have clear understanding of modern technologies and the best design practises. Excited to be at the deployment phase of my new career as a Front-End Web Developer dedicated to building and optimizing user-focused websites.</p>
             </p>
 
             <button type="button" ><a href="index.html" target="_blank"> Resume</a></button>
@@ -96,7 +95,7 @@
                 <h2 class="main-title big"><span>Our</span> Services</h2>
             </div>
             <p class="small">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione magnam in assumenda cum quidem saepe minus natus accusamus nihil quod error,
+                Wish to grow your business using diffent modern technologies. Don't worry. We focus on Quality and Cost-Effective solutions. Below are the all the services provided by our team.
             </p>
         </div>
         <div class="row">
@@ -106,8 +105,8 @@
                     <span class="service-icon">
                         <i class="fa-solid fa-code"></i>
                     </span>
-                    <h3 class="main-title">Web Development</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ad numquam iure repellendus velit modi </p>
+                    <h3 class="main-title">Website Designing</h3>
+                    <p>Let our team of expert designers put together a stunning website design for you.</p>
                     <a href="#services" class="read-more">Read more</a>
                 </div>
                 <span class="circle-before"></span>
@@ -120,8 +119,8 @@
                     <span class="service-icon">
                         <i class="fa-solid fa-code"></i>
                     </span>
-                    <h3 class="main-title">Web Development</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ad numquam iure repellendus velit modi </p>
+                    <h3 class="main-title">Website Development</h3>
+                    <p>Need your website putting together? Let our expert website developers help.</p>
                     <a href="#services" class="read-more">Read more</a>
                 </div>
                 <span class="circle-before"></span>
@@ -135,8 +134,8 @@
                     <span class="service-icon">
                         <i class="fa-solid fa-code"></i>
                     </span>
-                    <h3 class="main-title">Web Development</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ad numquam iure repellendus velit modi </p>
+                    <h3 class="main-title">Coming Soon</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ad numquam.</p>
                     <a href="#services" class="read-more">Read more</a>
                 </div>
                 <span class="circle-before"></span>
@@ -153,7 +152,7 @@
         <div class="contact-form">
                 <h1 class="big">Contact <span>Us</span> </h1>
             
-            <p class="small">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque, unde nulla nihil ipsum accusantium et, voluptas ipsa error, magni repudiandae necessitatibus sit incidunt animi iste. Repellat, corporis illum? Vitae, ducimus?</p>
+            <p class="small">Need to get in touch with us? You can contact us using the different social media's link and through the contact information given below.</p> <p class="small">You can also drop out messages from this form.</p>
             
             <form onsubmit="sendEmail(); reset(); return false;">
             
@@ -200,8 +199,6 @@
 
         </div>
 
-            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.587114001471!2d83.3358973142545!3d27.575321737890146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x47a40aa4843de5e9!2zMjfCsDM0JzMxLjEiTiA4M8KwMjAnMTcuMSJF!5e0!3m2!1sen!2sin!4v1663256078440!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      
-            </div> -->
         </div>
             <div class="links-bottom">
                 <a href="http://www.facebook.com/rahularyal3" target="_blank"><i class="fa-brands fa-facebook"></i></a>
@@ -234,31 +231,7 @@
     <script src="main.js"></script>
     <script src="app.js"></script>
     <script src=" https://smtpjs.com/v3/smtp.js"></script>
-
-    <script>
-
-       
- // Receive email from contact form using js 
-
- function sendEmail(){
-    Email.send({
-      Host : "smtp.gmail.com",
-      Username : "sharmapitambar0@gmail.com",
-      Password : "rahul@website123",
-      To : 'rahularyal2058@gmail.com',
-      From : document.getElementById("email").value,
-      Subject : "New contact Form Enquiry",
-      Body : "Name: " + document.getElementById("name").value + "<br> Email: " + document.getElementById("email").value + "<br> Phone no. : " + document.getElementById("phone").value + "<br> Message: " + document.getElementById("message").value
-  }).then(
-    message => alert("Message sent succesfully")
-  );
-  }
-
-    </script>
-
-
+    
     </body>
-
-   
 
 </html>
