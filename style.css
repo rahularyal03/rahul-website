@@ -332,7 +332,7 @@ button, .button{
     padding: 10px 20px;  
     border-radius: 30px;
     font-size: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     transition: 0.4s;
 
 }
@@ -340,6 +340,7 @@ button, .button{
 button a{
     text-decoration: none;
     color: #111;
+    font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
 }
 
 button:hover{
