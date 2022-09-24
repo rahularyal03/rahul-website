@@ -744,7 +744,7 @@ line-height: 20px;
   
 
     #click:checked~.option i:before{
-        content: "";
+        content: "\f00d";
     }
 
     .greeting{
@@ -753,6 +753,10 @@ line-height: 20px;
         width:100%;
         padding-top: 7px;
         
+    }
+
+    .about-text p{
+        text-align: justify;
     }
 
 
@@ -827,6 +831,9 @@ line-height: 20px;
     .about-text{
         width: 75%;
     }
+
+    
+
 
     .contact-form form input, form textarea {
         width: 90%;
