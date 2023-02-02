@@ -51,14 +51,15 @@ $(window).on('scroll',function(){
 
 
 
-const items = document.querySelectorAll(".navList a");
-items.forEach((item) => {
-    item.addEventListener("click",() =>{
-    document.querySelector(".navList a.active").classList.remove("active");
-    item.classList.add("active");
+// const items = document.querySelectorAll(".navList li a");
+// items.forEach((item) => {
+//     item.addEventListener("click",() =>{
+//     document.querySelector(".navList li a").classList.remove("active");
+//     item.classList.add("active");
+  
 
-});
-});
+// });
+// });
 
 
 
@@ -159,4 +160,24 @@ function init() {
   // Init TypeWriter
   new TypeWriter(txtElement, words, wait);
 }
+
+
+// responsive navBar
+document.getElementById('hamburger').onclick = function active(){
+  document.getElementById('navlist').classList.toggle('active');
+  document.getElementById('line1').classList.toggle('start1');
+  document.getElementById('line2').classList.toggle('start2');
+  document.getElementById('line3').classList.toggle('start3');
+
+
+
+}
+
+document.getElementById("navlist").onclick = function yes(){
+  document.getElementById('navlist').classList.remove('active');
+  document.getElementById('line1').classList.toggle('start1');
+  document.getElementById('line2').classList.toggle('start2');
+  document.getElementById('line3').classList.toggle('start3');
+}
+
 

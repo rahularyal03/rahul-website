@@ -19,23 +19,20 @@
 <body>
     <div class="background">
     <header>
-    <nav class="navbar h-nav-resp">
-
-        <input type="checkbox" id="click">
-        <label for="click" class="option" >
-            <i class="fas fa-bars"></i>
-        </label>
-            
+    <nav class="navbar">            
             <div class="greeting animate-charcter"><a href="#home">Rahul</div></a>
-            
+            <div class="hamburger" id="hamburger">
+                <div class="line" id="line1"></div>
+                <div class="line" id="line2"></div>
+                <div class="line" id="line3"></div>
+            </div>
 
-            <ul class="navList v-opacity-resp">
-                <li><a href="#home">Home</a></li>
+            <ul class="navList" id="navlist">
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <!-- <li><a href="#portfolio" onclick="whenClicked()" data-aos="fade-up"data-aos-delay="300">Portfolio</a></li> -->
                 <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-    
+                <li><a href="#contact">Contact Us</a></li>    
             </ul>
     
     </nav>
@@ -93,7 +90,7 @@
     <div class="content">
         <div class="row">
             <div class="header-section">
-                <h2 class="main-title big"><span>Our</span> Services</h2>
+                <h2 class="main-title big"><span>My</span> Services</h2>
             </div>
             <p class="small">
                 Wish to grow your business using diffent modern technologies. Don't worry. We focus on Quality and Cost-Effective solutions. Below are the all the services provided by our team.
@@ -107,7 +104,7 @@
                         <i class="fa-solid fa-code"></i>
                     </span>
                     <h3 class="main-title">Website Designing</h3>
-                    <p>Let our team of expert designers put together a stunning website design for you.</p>
+                    <p>Let my team of expert designers put together a stunning website design for you.</p>
                     <a href="#services" class="read-more">Read more</a>
                 </div>
                 <span class="circle-before"></span>
@@ -121,7 +118,7 @@
                         <i class="fa-solid fa-code"></i>
                     </span>
                     <h3 class="main-title">Website Development</h3>
-                    <p>Need your website putting together? Let our expert website developers help.</p>
+                    <p>Need your website putting together? Let my expert website developers team help you.</p>
                     <a href="#services" class="read-more">Read more</a>
                 </div>
                 <span class="circle-before"></span>
@@ -151,9 +148,9 @@
 <div class="background"></div>
 <section class="contact background" id="contact">
         <div class="contact-form">
-                <h1 class="big">Contact <span>Us</span> </h1>
+                <h1 class="big">Contact <span>Me</span> </h1>
             
-            <p class="small">Need to get in touch with us? You can contact us using the different social media's link and through the contact information given below.</p> <p class="small">You can also drop out messages from this form.</p>
+            <p class="small">Need to get in touch with Me? You can contact me using the different social media's link and through the contact information given below.</p> <p class="small">You can also drop out messages from this form.</p>
             
             <form onsubmit="sendEmail(); reset(); return false;">
             

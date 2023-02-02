@@ -20,7 +20,16 @@ html{
     top: 0; 
     padding:6px;
     justify-content: space-between;
-    transition: 1s;  
+    transition: 1s; 
+    z-index: 5; 
+}
+
+.navList{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+
 }
 
 .black{
@@ -30,7 +39,7 @@ html{
 
 
  .navList li{
-    display: inline-block;
+   
     list-style: none;
     margin: 0 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -59,14 +68,33 @@ html{
     transition: 0.5s;
 }
 
-.navList a.active::after{
+/* .navList li a.active::after{
     width: 100%;
     
-}
+} */
 
 .navList a:hover::after{
     width: 100%;
 } 
+
+
+
+.hamburger{
+    position: absolute;
+    top: 18%;
+    right: 5%;
+    display: none;
+
+      
+}
+
+.hamburger .line{
+    
+ width: 27px;
+ height: 4px;
+ background-color: rgb(253, 252, 252);
+ margin: 4px;
+}
 
 
 
@@ -79,6 +107,7 @@ html{
     cursor: pointer;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
 }
 
 .animate-charcter
@@ -414,35 +443,17 @@ button:hover{
     text-decoration: underline;
 }
 
- 
-
-.circle-before{
-    /* position: absolute; */
-    top: 0;
-    right: 0;
-    transform: translate(40%, -40%);
-    width: 100px;
-    height: 100px;
-    background-color: aqua;
-    border-radius: 50%;
-    transition: all 0.5s;
-}
-
-.single-services:hover .circle-before{
-    width: 100%;
-    height: 100%;
-    transform: none;
-    border: 0;
-    border-radius: 0;
-    opacity: 0.8;
-}
-
 .single-services:hover .service-icon {
     background-color: white;
     border-radius: 23px;
     transition: all 0.5s;
 
+   
+
 }
+
+
+
 
 .single-services:hover .service-icon i{
     color: aqua ;
@@ -453,10 +464,11 @@ button:hover{
 .service-coloumn{
     max-width: 30%;
     padding: 0 15px;
+    
 }
 
 .single-services{
-    /* position:relative; */
+    position:relative;
     margin-top: 30px;
     background-color: rgb(39, 69, 96);
     border-radius: 0;
@@ -467,8 +479,7 @@ button:hover{
 }
 
 .contain{
-    /* position: relative; */
-    z-index: 20;
+    position: relative;
 }
 
 .service-icon{
@@ -484,6 +495,7 @@ button:hover{
     /* color: #fff; */
     font-size: 30px;
     transition: all 0.5s;
+
 }
 
 
@@ -704,55 +716,56 @@ line-height: 20px;
 @media (max-width: 770px) {
 
  
-    .navList li{ 
-        display: block;
-        margin: 40px 0;
-        padding: 5px;         
-       
-    }
-
-    .navbar{
-        flex-direction: column;
-        justify-content: center;  
-        margin: 0;  
-
-    }
-  
-
     .navList{
-        position: fixed;
-        top:50px;
-        left: -100%;
+        position: absolute;
+        top: 35px;
+        flex-direction: column;
+        background-color: rgba(26, 24, 24, 0.975);
+        opacity: 0;
+        left: 0;
         width: 100%;
-        height: 100vh;
-        text-align: center;
-        background: #111;
-        display: block;
-        transition: all 0.5s;
-       
+        height: 0;
+        align-items: center;
+        overflow: hidden;
     }
 
-    .option {
-        display: block;
+
+    .navList li{
+        margin: 15px 0;
     }
+
+    
 
    
 
-    #click:checked ~ .navList{
-        left: 0%;
+    .active{
+        opacity: 1;
+        height: 100vh;
+        margin: 10px 0;
+       
     }
 
-  
-
-    #click:checked~.option i:before{
-        content: "\f00d";
+    .hamburger.start{
+        background-color: red;
     }
+    
+    .start1{
+        transform: translateY(0px) rotate(42deg);
+    }
+   
+    .start3{
+        transform: translateY(0px) rotate(-42deg);
+    }
+    .hamburger{
+        display: block;
+    }
+
 
     .greeting{
         text-align: center;
         font-size: 30px;
         width:100%;
-        padding-top: 7px;
+        /* padding-top: 3px; */
         
     }
 
