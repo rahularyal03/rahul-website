@@ -1,15 +1,34 @@
-function myFunction(){
+function submitted(){
 
    response = confirm("Are you sure want to submit?");
    if(response){
     document.getElementById('submitted').innerHTML = "Submitted";
-    
+       
    }
 
    else{
     document.getElementById('submitted').innerHTML = "Not Submitted";
    }
-}
+
+   setTimeout(function(){
+    document.getElementById('submitted').innerHTML = "";
+  },2000);
+
+
+};
+
+
+// progress bar 
+const spans = document.querySelectorAll(".prog-bar div");
+spans.forEach(div => {
+
+  div.style.width = div.dataset.width;
+  div.innerHTML = div.dataset.width;
+});
+
+
+
+
 
 
 // Inserting Date and Time in Website 
@@ -33,6 +52,7 @@ const interval = setInterval(() => {
 
     document.getElementById('date-time').innerHTML = dateTime;
 }, 1000);
+
 
 // window.addEventListener("scroll", function(){
 //     var header =document.querySelector("header");
@@ -162,6 +182,8 @@ function init() {
 }
 
 
+
+
 // responsive navBar
 document.getElementById('hamburger').onclick = function active(){
   document.getElementById('navlist').classList.toggle('active');
@@ -179,5 +201,11 @@ document.getElementById("navlist").onclick = function yes(){
   document.getElementById('line2').classList.toggle('start2');
   document.getElementById('line3').classList.toggle('start3');
 }
+
+
+// navlist line
+let lines = document.qu
+
+
 
 
