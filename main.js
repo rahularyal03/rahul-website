@@ -1,23 +1,3 @@
-function submitted(){
-
-   response = confirm("Are you sure want to submit?");
-   if(response){
-    document.getElementById('submitted').innerHTML = "Submitted";
-       
-   }
-
-   else{
-    document.getElementById('submitted').innerHTML = "Not Submitted";
-   }
-
-   setTimeout(function(){
-    document.getElementById('submitted').innerHTML = "";
-  },2000);
-
-
-};
-
-
 // progress bar 
 const spans = document.querySelectorAll(".prog-bar div");
 spans.forEach(div => {
@@ -54,10 +34,6 @@ const interval = setInterval(() => {
 }, 1000);
 
 
-// window.addEventListener("scroll", function(){
-//     var header =document.querySelector("header");
-//     header.classList.toggle("sticky", window.scrollY > 0);
-// })
 
 $(window).on('scroll',function(){
     if ($(window).scrollTop()){
@@ -68,18 +44,6 @@ $(window).on('scroll',function(){
         $('nav').removeClass('black');
     }
 });
-
-
-
-// const items = document.querySelectorAll(".navList li a");
-// items.forEach((item) => {
-//     item.addEventListener("click",() =>{
-//     document.querySelector(".navList li a").classList.remove("active");
-//     item.classList.add("active");
-  
-
-// });
-// });
 
 
 
@@ -203,8 +167,6 @@ document.getElementById("navlist").onclick = function yes(){
 }
 
 
-// navlist line
-let lines = document.qu
 
 
 
