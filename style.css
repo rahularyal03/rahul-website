@@ -69,10 +69,6 @@ html{
     transition: 0.5s;
 }
 
-.navList li a.show::after{
-    width: 100%;
-    
-}
 
 .navList a:hover::after{
     width: 100%;
